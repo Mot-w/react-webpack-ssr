@@ -2,36 +2,38 @@ let path = require('path');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let devServer = require('webpack-dev-server');
+let webpack = require('webpack');
 
 module.exports = {
     entry: {
-        index: './client/main.jsx'
+        index: './client/main.js'
     },
 
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve(__dirname, '../dist/src')
+        path: path.join(__dirname, '../dist/src')
     },
 
     module: {
         loaders: [
             {
-                test: /.\jsx$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
             {
-                test: /.\less$/,
+                test: /\.(css|less)$/,
                 exclude: /node_modules/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader', 'less-loader']
-                })
+                loader: ['style-loader', 'css-loader', 'less-loader']
             },
             {
                 test: /\.(png|jpg)$/,
                 exclude: /node_modules/,
                 loader: 'url-loader?limit=8197&name=images/[name].[hash:4].[ext]'
+            },
+            {
+                test: /\.(woff|svg|eot|ttf)\??.*$/,
+                loader: ['url-loader?name=fonts/[name].[hash:4].[ext]']
             }
         ]
     },
@@ -41,11 +43,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Mot’s Blog',
             template: './client/template/base.html'
-        })
+        }),
+        //new webpack.NamedModulesPlugin(),
+        //new webpack.HotModuleReplacementPlugin()
     ],
 
     devServer: {
-        port: 9000,
-        inline: true
-    }
+        port: 9000
+    }    
 }

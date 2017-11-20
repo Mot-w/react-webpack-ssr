@@ -9,4 +9,5 @@ npm install --save-dev extract-text-webpack-plugin  //提取css打包为一个�
 npm install --save-dev html-webpack-plugin  //自动生成html文件
 npm install url-loader file-loader --save-dev   //图片需要
 npm install webpack-dev-server --save-dev   //开发服务
+npm install --save-dev react-router react-router-dom     //react路由
 ```

@@ -1,0 +1,91 @@
+.app-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.app-header .header-content {
+  display: flex;
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+.app-header .header-brand {
+  width: 133px;
+  height: 100%;
+  font-size: 30px;
+  line-height: 60px;
+  text-align: left;
+}
+.app-header .header-menu {
+  display: flex;
+  width: 89px;
+  height: 100%;
+  justify-content: space-between;
+  margin-right: 59px;
+}
+.app-header .header-menu a {
+  line-height: 60px;
+  color: #809095;
+  text-decoration: none;
+  cursor: pointer;
+}
+.app-header .header-search {
+  display: flex;
+  align-items: center;
+}
+.app-header .header-search .header-search-input {
+  width: 266px;
+  height: 35px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+.app-header .header-search .header-search-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  background-color: #f2f6f8;
+  font-size: 13px;
+}
+.app-header .header-search .header-search-but {
+  width: 62px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #b591ed;
+  margin-left: 12px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+}
+.app-header .header-user {
+  display: flex;
+  justify-content: space-between;
+  width: 107px;
+  height: 100%;
+  margin-left: auto;
+}
+.app-header .header-user .header-user-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 26px;
+}
+.app-header .header-user .header-user-center div {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: red;
+}
+.app-header .header-user div {
+  display: flex;
+  width: 20px;
+  align-items: center;
+}

@@ -1,0 +1,93 @@
+@import '../../public/common.less';
+
+.app-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid @border;
+    .header-content {
+        display: flex;
+        width: 960px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .header-brand {
+        width: 133px;
+        height: 100%;
+        font-size: 30px;
+        line-height: 60px;
+        text-align: left;
+    }
+    .header-menu {
+        display: flex;
+        width: 89px;
+        height: 100%;
+        justify-content: space-between;
+        margin-right: 59px;
+        a {
+            line-height: 60px;
+            color: #809095;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .header-search {
+        display: flex;
+        align-items: center;
+        .header-search-input {
+            width: 266px;
+            height: 35px;
+            box-sizing: border-box;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                padding: 0px 10px;
+                box-sizing: border-box;
+                background-color: #f2f6f8;
+                font-size: 13px;
+            }
+        }
+        .header-search-but {
+            width: 62px;
+            height: 35px;
+            border-radius: 3px;
+            background-color: @themeColor;
+            margin-left: 12px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 13px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    .header-user {
+        display: flex;
+        justify-content: space-between;
+        width: 107px;
+        height: 100%;
+        margin-left: auto;
+        .header-user-center {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 26px;
+            div{
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                background-color: red;
+            }
+        }
+        div {
+            display: flex;
+            width: 20px;
+            align-items: center;
+        }
+    }
+}
